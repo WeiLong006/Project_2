@@ -1,9 +1,20 @@
-import React from "react";
+import React, { useState } from "react";
+import Button from "./Button";
 
-const Input = () => {
+const Input = (props) => {
+  const [userInput, setUserInput] = useState("");
+  const getInput = (event) => {
+    setUserInput(event.target.value);
+  };
+
+  const search = () =>{
+    props.getInput(userInput)
+  }
+
   return (
     <>
-      <input></input>
+      <input onChange={getInput}></input>
+      <Button name="Search" btnFunc={search} />
     </>
   );
 };
