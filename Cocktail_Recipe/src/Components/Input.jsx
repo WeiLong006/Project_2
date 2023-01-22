@@ -7,9 +7,10 @@ const Input = (props) => {
     setUserInput(event.target.value);
   };
 
-  const search = () =>{
-    props.getInput(userInput)
-  }
+  const search = () => {
+    props.getInput(userInput);
+    props.setSearch(true);
+  };
 
   return (
     <>
