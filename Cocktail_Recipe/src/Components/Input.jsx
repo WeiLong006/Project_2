@@ -10,12 +10,13 @@ const Input = (props) => {
   const search = () => {
     props.getInput(userInput);
     props.setSearch(true);
+    setUserInput("");
   };
 
   return (
     <>
-      <input onChange={getInput}></input>
-      <Button name="Search" btnFunc={search} />
+      <input value={userInput} onChange={getInput}></input>
+      <Button btnName="Search" btnFunc={search} />
     </>
   );
 };
