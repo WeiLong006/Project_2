@@ -16,8 +16,8 @@ const Image = (props) => {
     <div className="drink">
       <label>{props.drink.strDrink}</label>
       <img src={props.drink.strDrinkThumb} onClick={imgClick}></img>
-      {click && <Modal closeBtn={closeClick} />}
-      {console.log(props.drink)}
+      {click && <Modal closeBtn={closeClick} drink={props.drink}/>}
+      {/* {console.log(props.drink)} */}
     </div>
   );
 };
