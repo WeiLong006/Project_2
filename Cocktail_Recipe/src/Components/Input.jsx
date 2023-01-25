@@ -29,7 +29,11 @@ const Input = (props) => {
 
   return (
     <>
-      <input value={userInput} onChange={getInput}></input>
+      <input
+        value={userInput}
+        onChange={getInput}
+        placeholder="Search cocktail name"
+      ></input>
       <Button btnName="Search" btnFunc={search} />
     </>
   );

@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Modal from "./Modal";
+import "../App.css";
 
 const Image = (props) => {
   const [click, setClick] = useState(false);
@@ -14,10 +15,18 @@ const Image = (props) => {
 
   return (
     <div className="drink">
-      <label>{props.drink.strDrink}</label>
-      <img src={props.drink.strDrinkThumb} onClick={imgClick}></img>
-      {click && <Modal closeBtn={closeClick} drink={props.drink}/>}
-      {/* {console.log(props.drink)} */}
+      <ul>
+        <li>
+          <label className="imageLabel">{props.drink.strDrink}</label>
+          <img
+            className="displayImage"
+            src={props.drink.strDrinkThumb}
+            onClick={imgClick}
+          ></img>
+          {click && <Modal closeBtn={closeClick} drink={props.drink} />}
+          {/* {console.log(props.drink)} */}
+        </li>
+      </ul>
     </div>
   );
 };

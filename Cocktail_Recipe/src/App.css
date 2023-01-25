@@ -56,7 +56,13 @@
 
 /* Modal Content/Box */
 .modal-content {
-  background-color: #fefefe;
+  background: rgb(222, 255, 64);
+  background: linear-gradient(
+    90deg,
+    rgba(222, 255, 64, 1) 18%,
+    rgba(78, 180, 90, 1) 53%,
+    rgba(255, 0, 82, 1) 100%
+  );
   margin: 15% auto; /* 15% from the top and centered */
   padding: 20px;
   border: 1px solid #888;
@@ -64,10 +70,94 @@
   font-family: "Indie Flower", cursive;
 }
 
-/* The Close Button */
-.close {
-  color: #aaa;
-  float: right;
-  font-size: 28px;
-  font-weight: bold;
+.modalImage {
+  border: 1px solid #ddd; /* Gray border */
+  border-radius: 4px; /* Rounded border */
+  padding: 5px; /* Some padding */
+  width: 150px; /* Set a small width */
+}
+
+/* Display CSS */
+
+.displayImage {
+  width: 80px;
+  height: 45px;
+}
+
+ul {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  list-style: none;
+  width: 95px;
+  height: 45px;
+  border-radius: 3px;
+  overflow: hidden;
+  box-shadow: 1px 1px 3px 1px;
+}
+
+li {
+  position: relative;
+  width: 19px;
+  height: 45px;
+  float: left;
+  border-left: 1px solid white;
+  -webkit-transition: all 0.7s;
+  -moz-transition: all 0.7s;
+  transition: all 0.7s;
+  box-shadow: -2px 0 10px 2px;
+}
+
+.imageLabel {
+  display: block;
+  position: absolute;
+  bottom: 0;
+  width: 50%;
+  color: white;
+  white-space: nowrap;
+  padding: 20px;
+  background: -moz-linear-gradient(
+    left,
+    rgba(0, 0, 0, 0.65) 0%,
+    rgba(0, 0, 0, 0) 100%
+  ); /* FF3.6+ */
+  background: -webkit-gradient(
+    linear,
+    left top,
+    right top,
+    color-stop(0%, rgba(0, 0, 0, 0.65)),
+    color-stop(100%, rgba(0, 0, 0, 0))
+  ); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(
+    left,
+    rgba(0, 0, 0, 0.65) 0%,
+    rgba(0, 0, 0, 0) 100%
+  ); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(
+    left,
+    rgba(0, 0, 0, 0.65) 0%,
+    rgba(0, 0, 0, 0) 100%
+  ); /* Opera 11.10+ */
+  background: -ms-linear-gradient(
+    left,
+    rgba(0, 0, 0, 0.65) 0%,
+    rgba(0, 0, 0, 0) 100%
+  ); /* IE10+ */
+  background: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0.65) 0%,
+    rgba(0, 0, 0, 0) 100%
+  ); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a6000000', endColorstr='#00000000',GradientType=1 ); /* IE6-9 */
+}
+
+ul:hover li {
+  width: 50px;
+}
+
+ul li:hover {
+  width: 750px;
 }
