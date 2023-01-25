@@ -14,20 +14,16 @@ const Image = (props) => {
   };
 
   return (
-    <div className="drink">
-      <ul>
-        <li>
-          <label className="imageLabel">{props.drink.strDrink}</label>
-          <img
-            className="displayImage"
-            src={props.drink.strDrinkThumb}
-            onClick={imgClick}
-          ></img>
-          {click && <Modal closeBtn={closeClick} drink={props.drink} />}
-          {/* {console.log(props.drink)} */}
-        </li>
-      </ul>
-    </div>
+    <>
+      <label className="imageLabel">{props.drink.strDrink}</label>
+      <img
+        className="displayImage"
+        src={props.drink.strDrinkThumb}
+        onClick={imgClick}
+      ></img>
+      {click && <Modal closeBtn={closeClick} drink={props.drink} />}
+      {/* {console.log(props.drink)} */}
+    </>
   );
 };
 

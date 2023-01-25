@@ -13,7 +13,9 @@ const Home = () => {
       {/* {console.log(result)} */}
       <Input setResult={setResult} />
       {/* <Search cocktail={cocktail} setSearch={setSearch} setResult={setResult} /> */}
-      <Display result={result} />
+      <ul>
+        <Display result={result} />
+      </ul>
       {console.log(result)}
     </>
   );

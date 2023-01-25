@@ -7,7 +7,9 @@ const Display = (props) => {
     return (
       <>
         <div className="drink">
-          <Image drink={drink} />
+          <li>
+            <Image drink={drink} />
+          </li>
         </div>
       </>
     );
