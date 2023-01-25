@@ -1,15 +1,16 @@
 import React from "react";
 import "../App.css";
+import Button from "./Button";
 
-const Modal = () => {
+const Modal = (props) => {
+
   return (
     // Open Modal
     <div id="myModal" className="modal">
       {/* Modal content */}
-      <div class="modal-content">
-        <span className="close">&times;</span>
+      <div className="modal-content">
         <label>How many people are getting drunk?</label>
-        <button id="submit">Submit</button>
+        <Button btnName="Close" btnFunc={props.closeBtn} />
       </div>
     </div>
   );

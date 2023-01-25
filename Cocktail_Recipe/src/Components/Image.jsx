@@ -1,10 +1,23 @@
-import React from "react";
+import React, { useState } from "react";
+import Modal from "./Modal";
 
 const Image = (props) => {
+  const [click, setClick] = useState(false);
+
+  const imgClick = () => {
+    setClick(true);
+  };
+
+  const closeClick = () => {
+    setClick(false);
+  };
+
   return (
     <div className="drink">
-      <label>{props.imageName}</label>
-      <img src={props.imageSrc}></img>
+      <label>{props.drink.strDrink}</label>
+      <img src={props.drink.strDrinkThumb} onClick={imgClick}></img>
+      {click && <Modal closeBtn={closeClick} />}
+      {console.log(props.drink)}
     </div>
   );
 };

@@ -19,6 +19,7 @@ const Input = (props) => {
     const res = await fetch(url);
     const resData = await res.json();
     props.setResult(resData.drinks);
+    setUserInput("");
   };
 
   if (userInput && userSearch) {

@@ -7,7 +7,7 @@ const Display = (props) => {
     return (
       <>
         <div className="drink">
-          <Image imageName={drink.strDrink} imageSrc={[drink.strDrinkThumb]} />
+          <Image drink={drink} />
         </div>
       </>
     );
