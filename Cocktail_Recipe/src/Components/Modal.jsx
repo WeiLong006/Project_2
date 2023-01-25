@@ -7,12 +7,31 @@ const Modal = (props) => {
   const measurement = [];
 
   for (let i = 1; i <= 15; i++) {
-    const defaultName = "strIngredient";
-    const name = defaultName + i;
-    if (props.drink[name]) {
-      console.log(props.drink[name]);
+    const ingredientDefaultName = "strIngredient";
+    const ingredientName = ingredientDefaultName + i;
+
+    const measurementDefaultName = "strMeasure";
+    const measurementName = measurementDefaultName + i;
+
+    if (props.drink[ingredientName]) {
+      //   console.log(props.drink[ingredientName]);
+      ingredient.push(props.drink[ingredientName]);
+    }
+
+    if (props.drink[measurementName] === null) {
+      measurement.push(" ");
+    } else {
+      measurement.push(props.drink[measurementName]);
     }
   }
+
+  const mapIngredient = ingredient.map((ingre, id) => {
+    return <div>{ingre}</div>;
+  });
+
+  const mapMeasurement = measurement.map((measure, id) => {
+    return <div>{measure}</div>;
+  });
 
   // const ingre = props.drink.map((item,id)=()=>{
   //     return (
@@ -26,8 +45,10 @@ const Modal = (props) => {
     <div id="myModal" className="modal">
       {/* Modal content */}
       <div className="modal-content">
-        <label>{props.drink.strIngredient1}</label>
-        {console.log(props.drink)}
+        <label className="ingredient">{mapIngredient}</label>
+        <label className="measurement">{mapMeasurement}</label>
+        <img src={props.drink.strDrinkThumb}></img>
+        {console.log(ingredient)}
         <Button btnName="Close" btnFunc={props.closeBtn} />
       </div>
     </div>
