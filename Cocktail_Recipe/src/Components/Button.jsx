@@ -3,7 +3,7 @@ import React from "react";
 const Button = (props) => {
   return (
     <>
-      <button className={props.className} onClick={props.btnFunc}>
+      <button className="button-85" onClick={props.btnFunc}>
         {props.btnName}
       </button>
     </>

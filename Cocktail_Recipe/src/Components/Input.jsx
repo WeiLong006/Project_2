@@ -30,6 +30,7 @@ const Input = (props) => {
   return (
     <>
       <input
+      className="inputBox"
         value={userInput}
         onChange={getInput}
         placeholder="Search cocktail name"

@@ -12,13 +12,17 @@ function App() {
   return (
     <div className="App">
       {/* <Home /> */}
-      <h1>Your ultimate cocktail guide</h1>
-      <button>
-        <Link to="Home">Home</Link>
+      <h1 className="glow">Cocktail guide</h1>
+      <button className="button-85 linkBtn">
+        <Link to="Home" style={{ color: "#FFF" }}>
+          Home
+        </Link>
       </button>
 
-      <button>
-        <Link to="AboutUs">About Us</Link>
+      <button className="button-85 linkBtn" role="button">
+        <Link to="AboutUs" style={{ color: "#FFF" }}>
+          About Us
+        </Link>
       </button>
       <br />
       <br />
