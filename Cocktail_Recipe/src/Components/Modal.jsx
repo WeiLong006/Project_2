@@ -49,7 +49,7 @@ const Modal = (props) => {
         <label className="measurement">{mapMeasurement}</label>
         <img className="modalImage" src={props.drink.strDrinkThumb}></img>
         {/* {console.log(ingredient)} */}
-        <Button btnName="Close" btnFunc={props.closeBtn} />
+        <Button className="modalBtn" btnName="Close" btnFunc={props.closeBtn} />
       </div>
     </div>
   );

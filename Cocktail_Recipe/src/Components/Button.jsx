@@ -3,7 +3,9 @@ import React from "react";
 const Button = (props) => {
   return (
     <>
-      <button onClick={props.btnFunc}>{props.btnName}</button>
+      <button className={props.className} onClick={props.btnFunc}>
+        {props.btnName}
+      </button>
     </>
   );
 };
